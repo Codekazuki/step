@@ -41,10 +41,10 @@ body {
   font-size: 20px;
   margin: 40px 0;
   font-weight: bold;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: yellowgreen;
 }
 
 .buttons {
@@ -59,7 +59,6 @@ body {
   border-radius: 100px;
   font-size: 14px;
   font-weight: bold;
-
   display: flex;
   align-items: center;
   gap: 10px;

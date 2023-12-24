@@ -15,6 +15,10 @@ function App() {
   function handlePrevious() {
     if (step > 1) setStep(step - 1);
   }
+  function handleReset() {
+    if (step >= 2) setStep(step - 1);
+    if (step >= 3) setStep(step - 2);
+  }
 
   return (
     <div className='steps'>
@@ -33,6 +37,15 @@ function App() {
           style={{ backgroundColor: "#7950f2", color: "#000000" }}
         >
           Previous
+        </button>
+        <button
+          style={{
+            backgroundColor: "#880000",
+            color: "#fff",
+          }}
+          onClick={handleReset}
+        >
+          Reset
         </button>
         <button
           style={{

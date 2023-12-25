@@ -20,12 +20,16 @@ function App() {
     if (step >= 2) setStep(step - 1);
     if (step >= 3) setStep(step - 2);
   }
-  function handleIsOpen() {}
+  function handleIsOpen() {
+    setIsOpen(!isOpen);
+  }
 
   return (
     isOpen && (
       <div className='steps'>
-        <button onClick={handleIsOpen}>&times;</button>
+        <button className='close-button' onClick={handleIsOpen}>
+          &times;
+        </button>
         <div className='numbers'>
           <div className={`${step >= 1 ? "active" : ""}`}>1</div>
           <div className={`${step >= 2 ? "active" : ""}`}>2</div>

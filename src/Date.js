@@ -11,22 +11,22 @@ const Date = () => {
   }
 
   function handleIncreaseCount() {
-    setCount((s) => s + 5);
+    setCount((c) => c + step);
   }
   function handleDecreaseCount() {
-    setCount((s) => s - 5);
+    setCount((c) => c - step);
   }
 
   return (
     <section>
       <div>
         <button onClick={handleDecreaseStep}>-</button>
-        <span>{step}</span>
+        <span> Step:{step}</span>
         <button onClick={handleIncreaseStep}>+</button>
       </div>
       <div>
         <button onClick={handleDecreaseCount}>-</button>
-        <span>{count}</span>
+        <span>Count:{count}</span>
         <button onClick={handleIncreaseCount}>+</button>
       </div>
     </section>

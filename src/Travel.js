@@ -35,10 +35,12 @@ const Travel = () => {
         />
       </label>
       <button onClick={handleDoubleClick}>Double</button>
-      {result !== null && (
+      {result !== null ? (
         <p>
           The double of {input} is: {result}
         </p>
+      ) : (
+        <p>You should input a number</p>
       )}
     </div>
   );

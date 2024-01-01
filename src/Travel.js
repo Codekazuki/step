@@ -1,4 +1,9 @@
 import React from "react";
+import "./travel.css";
+import { Logo } from "./Logo";
+import Form from "./Form";
+import PackingList from "./PackingList";
+import Stats from "./Stats";
 
 const initialItems = [
   { id: 1, description: "Passports", quantity: 2, packed: false },
@@ -9,8 +14,10 @@ const initialItems = [
 const Travel = () => {
   return (
     <div>
-      <p>hello</p>
-      <h6>lets Travel</h6>
+      <Logo />
+      <Form />
+      <PackingList />
+      <Stats />
     </div>
   );
 };

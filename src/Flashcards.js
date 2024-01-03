@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import "./flashcards.css";
 const questions = [
   {
     id: 3457,
@@ -34,7 +35,26 @@ const questions = [
 ];
 
 const Flashcards = () => {
-  return <div>Flashcards</div>;
+  const [selectedId, setSelectedId] = useState(null);
+
+  function handleClick(id) {
+    setSelectedId(id);
+  }
+  return (
+    <div className='flashcards'>
+      {questions.map((question) => (
+        <div
+          key={question.id}
+          onClick={() => handleClick(question.id)}
+          className={question.id === selectedId ? "selected" : ""}
+        >
+          <p>
+            {question.id === selectedId ? question.answer : question.question}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default Flashcards;

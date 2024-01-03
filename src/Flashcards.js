@@ -38,7 +38,7 @@ const Flashcards = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   function handleClick(id) {
-    setSelectedId(id);
+    setSelectedId(id !== selectedId ? id : null);
   }
   return (
     <div className='flashcards'>

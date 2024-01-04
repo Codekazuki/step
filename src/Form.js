@@ -15,7 +15,7 @@ const Form = () => {
   }
   return (
     <form onSubmit={handleSubmit} className='add-form'>
-      <h2>What do you want to pack?</h2>
+      <h2>What do you want to pack for your trip?</h2>
       <select value={quantity} onChange={(e) => setQuantity(e.target.value)}>
         {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
           <option value={num} key={num}>

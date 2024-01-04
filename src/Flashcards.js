@@ -32,6 +32,16 @@ const questions = [
       "What do we call an input element that is completely synchronised with state?",
     answer: "Controlled element",
   },
+  {
+    id: 1992,
+    question: "Who is the graetest player of all time?",
+    answer: "pele",
+  },
+  {
+    id: 1966,
+    question: "Who be lev yashin?",
+    answer: "Goat goalkeeper",
+  },
 ];
 
 const Flashcards = () => {

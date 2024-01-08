@@ -14,7 +14,7 @@ const Travel = () => {
   return (
     <div>
       <Logo />
-      <Form handleAddItems={handleAddItems} />
+      <Form on AddItems={handleAddItems} />
       <PackingList items={items} />
       <Stats />
     </div>

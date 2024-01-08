@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = ({ handleAddItems }) => {
+const Form = ({ onAddItems }) => {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
@@ -9,7 +9,7 @@ const Form = ({ handleAddItems }) => {
     const newItem = { description, quantity, id: Date.now(), parked: false };
     if (!description)
       return alert("Shey you dey whine? Abeg put wetin you wan park");
-    handleAddItems(newItem);
+    onAddItems(newItem);
     setDescription("");
     setQuantity(1);
     console.log(newItem);

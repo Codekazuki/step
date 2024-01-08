@@ -1,17 +1,17 @@
 import React from "react";
 
-const PackingList = ({ items }) => {
+const PackingList = ({ items, onDeleteItem }) => {
   return (
     <div className='list'>
       <ul>
         {items.map((item) => (
-          <Item key={item.id} item={item} />
+          <Item key={item.id} onDeleteItem={onDeleteItem} item={item} />
         ))}
       </ul>
     </div>
   );
 };
-function Item({ item }) {
+function Item({ item, onDeleteItem }) {
   return (
     <li>
       <span
@@ -21,13 +21,7 @@ function Item({ item }) {
       >
         {item.quantity} {item.description}
       </span>
-      <button
-        onClick={(e) => {
-          alert("delete functionality not active yet");
-        }}
-      >
-        ❌
-      </button>
+      <button onClick={onDeleteItem(item.id)}>❌</button>
     </li>
   );
 }

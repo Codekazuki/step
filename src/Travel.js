@@ -11,11 +11,14 @@ const Travel = () => {
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
   }
+  function handleDeleteItem(id) {
+    setItems((items) => items.filter((item) => item.id !== id));
+  }
   return (
     <div>
       <Logo />
       <Form onAddItems={handleAddItems} />
-      <PackingList items={items} />
+      <PackingList onDeleteItem={handleDeleteItem} items={items} />
       <Stats />
     </div>
   );

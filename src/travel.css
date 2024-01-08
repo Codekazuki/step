@@ -115,7 +115,6 @@ input[type="checkbox"] {
 }
 
 .list li button {
-  cursor: zoom-out;
   background: none;
   border: none;
   font-size: 1.8rem;

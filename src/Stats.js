@@ -1,7 +1,12 @@
 import React from "react";
 
-const Stats = () => {
-  return <div>Stats would appear here</div>;
+const Stats = ({ items }) => {
+  const numItems = items.length;
+  return (
+    <footer className='stats'>
+      <em>You have {numItems} items </em>
+    </footer>
+  );
 };
 
 export default Stats;

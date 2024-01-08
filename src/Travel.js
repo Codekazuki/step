@@ -14,7 +14,7 @@ const Travel = () => {
   function handleDeleteItem(id) {
     setItems((items) => items.filter((item) => item.id !== id));
   }
-  function handleToggleProperty(id) {
+  function handleToggleItem(id) {
     setItems((items) =>
       items.map((item) =>
         item.id === id ? { ...item, packed: !item.packed } : item
@@ -25,8 +25,12 @@ const Travel = () => {
     <div>
       <Logo />
       <Form onAddItems={handleAddItems} />
-      <PackingList onDeleteItem={handleDeleteItem} items={items} />
-      <Stats />
+      <PackingList
+        onToggleItem={handleToggleItem}
+        onDeleteItem={handleDeleteItem}
+        items={items}
+      />
+      <Stats items={items} />
     </div>
   );
 };

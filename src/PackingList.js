@@ -14,6 +14,7 @@ const PackingList = ({ items, onDeleteItem }) => {
 function Item({ item, onDeleteItem }) {
   return (
     <li>
+      <input type='checkbox' value={item.packed} onChange={() => {}} />
       <span
         style={
           item.packed ? { textDecoration: "line-through", color: "green" } : {}
@@ -21,7 +22,7 @@ function Item({ item, onDeleteItem }) {
       >
         {item.quantity} {item.description}
       </span>
-      <button onClick={onDeleteItem(item.id)}>❌</button>
+      <button onClick={() => onDeleteItem(item.id)}>❌</button>
     </li>
   );
 }

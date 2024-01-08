@@ -6,7 +6,7 @@ const Form = ({ onAddItems }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const newItem = { description, quantity, id: Date.now(), parked: false };
+    const newItem = { description, quantity, id: Date.now(), packed: false };
     if (!description)
       return alert("Shey you dey whine? Abeg put wetin you wan park");
     onAddItems(newItem);
@@ -25,7 +25,7 @@ const Form = ({ onAddItems }) => {
       </select>
       <input
         type='text'
-        placeholder='item'
+        placeholder='enter item name '
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />

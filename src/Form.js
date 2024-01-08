@@ -12,7 +12,6 @@ const Form = ({ onAddItems }) => {
     onAddItems(newItem);
     setDescription("");
     setQuantity(1);
-    console.log(newItem);
   }
   return (
     <form onSubmit={handleSubmit} className='add-form'>

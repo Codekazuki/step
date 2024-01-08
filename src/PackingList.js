@@ -1,11 +1,5 @@
 import React from "react";
 
-// const initialItems = [
-//   { id: 1, description: "Passports", quantity: 2, packed: true },
-//   { id: 2, description: "Socks", quantity: 12, packed: false },
-//   { id: 3, description: "Brush", quantity: 1, packed: false },
-// ];
-
 const PackingList = ({ items }) => {
   return (
     <div className='list'>
@@ -27,7 +21,13 @@ function Item({ item }) {
       >
         {item.quantity} {item.description}
       </span>
-      <button>❌</button>
+      <button
+        onClick={(e) => {
+          alert("delete functionality not active yet");
+        }}
+      >
+        ❌
+      </button>
     </li>
   );
 }

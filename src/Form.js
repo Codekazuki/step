@@ -3,12 +3,17 @@ import React, { useState } from "react";
 const Form = () => {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const [items, setItems] = useState([]);
+  function handleAddItems(item) {
+    setItems((items) => [...items, item]);
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
     const newItem = { description, quantity, id: Date.now(), parked: false };
     if (!description)
       return alert("Shey you dey whine? Abeg put wetin you wan park");
+    handleAddItems(newItem);
     setDescription("");
     setQuantity(1);
     console.log(newItem);

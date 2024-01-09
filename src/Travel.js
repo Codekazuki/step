@@ -22,7 +22,10 @@ const Travel = () => {
     );
   }
   function handleClearList() {
-    setItems([]);
+    const confirmed = window.confirm(
+      "Are you sure you want to clear all the items in the list?"
+    );
+    if (confirmed) setItems([]);
   }
   return (
     <div>

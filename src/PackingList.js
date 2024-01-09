@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const PackingList = ({ items, onDeleteItem, onToggleItem }) => {
+const PackingList = ({ items, onDeleteItem, onToggleItem, onClearList }) => {
   const [sortBy, setSortBy] = useState("input");
   let sortedItems;
   if (sortBy === "input") sortedItems = items;
@@ -14,6 +14,7 @@ const PackingList = ({ items, onDeleteItem, onToggleItem }) => {
       .sort((a, b) => Number(a.packed) - Number(b.packed));
   if (sortBy === "quantity")
     sortedItems = items.slice().sort((a, b) => b.quantity - a.quantity);
+
   return (
     <div className='list'>
       <ul>
@@ -34,6 +35,7 @@ const PackingList = ({ items, onDeleteItem, onToggleItem }) => {
           <option value='quantity'>Sort by quantity</option>
         </select>
       </div>
+      <button onClick={onClearList}>Clear List</button>
     </div>
   );
 };

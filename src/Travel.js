@@ -21,6 +21,9 @@ const Travel = () => {
       )
     );
   }
+  function handleClearList() {
+    setItems([]);
+  }
   return (
     <div>
       <Logo />
@@ -29,6 +32,7 @@ const Travel = () => {
         onToggleItem={handleToggleItem}
         onDeleteItem={handleDeleteItem}
         items={items}
+        onClearList={handleClearList}
       />
       <Stats items={items} />
     </div>

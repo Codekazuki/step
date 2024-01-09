@@ -10,8 +10,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <DateCounter />
+    {/* <DateCounter /> */}
     <Travel />
-    <Flashcards />
+    {/* <Flashcards /> */}
   </React.StrictMode>
 );

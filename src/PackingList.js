@@ -35,7 +35,10 @@ const PackingList = ({ items, onDeleteItem, onToggleItem, onClearList }) => {
           <option value='quantity'>Sort by quantity</option>
         </select>
       </div>
-      <button onClick={onClearList}>Clear List</button>
+
+      {sortedItems.length > 0 && (
+        <button onClick={onClearList}>Clear List</button>
+      )}
     </div>
   );
 };
